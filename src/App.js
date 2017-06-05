@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home';
-import {BrowserRouter,Route,Link} from 'react-router-dom'
+import Movie from './components/Movie';
+import {BrowserRouter,Route,Link} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class App extends Component {
             </div>
             <div className="container">
               <Route exactly pattern="/" component={Home} />
+              <Route path="/movies/:movieId" component={Movie}/>
             </div>
           </div>
         </BrowserRouter>
